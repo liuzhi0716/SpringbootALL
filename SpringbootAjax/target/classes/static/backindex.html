@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // bind 'myForm' and provide a simple callback function
+        $('#myForm').post(function() {
+            //url:"backindex.html",
+            $.ajax({
+                error:function(data){
+                    alert(data);
+                },
+                success:function(data){
+                    alert(data);
+                }
+            });
+        });
+    });
+
+    /* $.post("login", { username: $("[name='username']").val(), password: $("input:password").val() },
+         //$.post("login", { name: "liuzhi", password: "123456" },
+         function(data){
+             alert("Data Loaded: " + data);
+         });*/
+</script>
+<link rel="stylesheet" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />  
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	后台管理页面。
+</body>
+</html>

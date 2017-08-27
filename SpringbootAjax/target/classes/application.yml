@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: yoke
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/yoke?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    #data-username: root
+    #data-password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+server:
+  context-path: /yoke
+  port: 8080
+mybatis:
+  typeAliasesPackage: com.ecnu.model

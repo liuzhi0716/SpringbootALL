@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $('#liu').click(function(){//点击按钮提交
+			alert("1");
+            //要提交的表单id为form1
+            $.ajax({
+                url:"loginPost",
+                data:$("#myForm").serialize(),
+                type:"post",
+                success:function(data){//ajax返回的数据
+					alert(data.id+data.name);
+                }
+            });
+            alert("2");
+        });
+
+
+    });
+</script>
+<link rel="stylesheet" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" />  
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>hello zhangyan</h2>
+	<form id="myForm"  method="post">
+	<input type="text" value="用户名"/>
+	<input type="text"  name="username" id="username" value="zhangyan"/>
+	<input type="text" value="密码" />
+	<input type="password" name="password"/>
+		<button type="button" class="btn-warning" id="liu">基本按钮</button>
+	</form>
+	<div class="container">
+		<h2>Button</h2>
+		<p>.btn 类是按钮的基本样式:</p>
+	</div>
+</body>
+</html>

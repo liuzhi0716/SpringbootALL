@@ -1,0 +1,8 @@
+com\ecnu\controller\HelloController.class
+com\ecnu\controller\IndexViewController.class
+com\ecnu\SpringbootApplication.class
+com\ecnu\service\impl\HelloServiceImpl.class
+com\ecnu\repository\BaseRepository.class
+com\ecnu\service\HelloService.class
+com\ecnu\model\HelloEntity.class
+com\ecnu\model\BaseEntity.class
